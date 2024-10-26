@@ -11,7 +11,7 @@ const roboto = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'Create Next App',
+  title: 'Auth Termplate - Next Js 14',
 }
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={`${roboto.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
