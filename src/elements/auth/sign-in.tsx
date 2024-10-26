@@ -31,6 +31,7 @@ const formSchema = z.object({
     .max(15, {
       message: 'A senha deve conter no máximo 15 caracteres!',
     }),
+  saveCookie: z.boolean().optional(),
 })
 
 export function SignIn() {
@@ -39,6 +40,7 @@ export function SignIn() {
     defaultValues: {
       email: '',
       password: '',
+      saveCookie: false,
     },
   })
 
@@ -91,7 +93,7 @@ export function SignIn() {
 
         <FormField
           control={form.control}
-          name="email"
+          name="saveCookie"
           render={({ field }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md">
               <FormControl>
@@ -103,6 +105,7 @@ export function SignIn() {
             </FormItem>
           )}
         />
+
         <Button type="submit">Realizar Login</Button>
       </form>
     </Form>
